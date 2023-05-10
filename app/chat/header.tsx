@@ -1,4 +1,5 @@
-import React from "react";
+import Link from "next/link";
+import { routes } from "../routes";
 
 export const Header = () => {
   return (
@@ -13,9 +14,9 @@ export const Header = () => {
           </a>
         </div>
         <div className="flex flex-1 justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href={routes.login()}>
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
