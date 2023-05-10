@@ -2,12 +2,11 @@ import React from "react";
 import { EmailInput } from "./EmailInput";
 import { PasswordInput } from "./PasswordInput";
 import { SubmitButton } from "./SubmitButton";
-import { useLoginForm } from "../dependencies/use-login-form";
+import { save } from "./_action";
 
 export const LoginForm = () => {
-  const { handleSubmit } = useLoginForm();
   return (
-    <form onSubmit={handleSubmit((data) => console.log(data))}>
+    <form action={save}>
       <EmailInput />
       <PasswordInput />
       <SubmitButton />
