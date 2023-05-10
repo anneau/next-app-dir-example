@@ -9,10 +9,11 @@ export default async function Home() {
       <h2 className="text-2xl mb-6">Hi, Guest!</h2>
       <div>This is Chat Application</div>
       <div>Please login before using chat</div>
-      <Link href={routes.login()}>
-        Log in <span aria-hidden="true">&rarr;</span>
-      </Link>
-      {usersCount}
+      <div className="flex flex-row gap-2">
+        <Link href={routes.signIn()}>Sign in</Link>
+        <span>or</span>
+        <Link href={routes.signUp()}>Sign up</Link>
+      </div>
     </main>
   );
 }

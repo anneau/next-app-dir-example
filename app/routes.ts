@@ -1,4 +1,5 @@
 export const routes = {
   top: () => "/",
-  login: () => "/auth/login",
+  signIn: () => "/auth/sign-in",
+  signUp: () => "/auth/sign-up",
 };

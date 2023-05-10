@@ -1,16 +1,16 @@
 "use client";
 
 import { FormProvider, useForm } from "react-hook-form";
-import { LoginSchema } from "./dependencies/login-schema";
+import { AuthSchema } from "@/features/auth/model/auth-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { LoginForm } from "./components/LoginForm";
+import { Form } from "./Form";
 
 export default function LoginPage() {
-  const methods = useForm({ resolver: zodResolver(LoginSchema) });
+  const methods = useForm({ resolver: zodResolver(AuthSchema) });
   return (
     <div className="flex">
       <FormProvider {...methods}>
-        <LoginForm />
+        <Form />
       </FormProvider>
     </div>
   );
