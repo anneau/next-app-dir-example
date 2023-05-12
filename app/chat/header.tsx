@@ -14,7 +14,7 @@ export const Header = () => {
           </a>
         </div>
         <div className="flex flex-1 justify-end">
-          <Link href={routes.login()}>
+          <Link href={routes.signIn()}>
             Log in <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
